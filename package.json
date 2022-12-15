@@ -1,0 +1,36 @@
+{
+  "name": "@aibulat/ctl-ufw",
+  "version": "0.0.1",
+  "description": "Manage UFW rules",
+  "main": "dist/ufw.js",
+  "type": "module",
+  "bin": {
+    "ctl-ufw": "dist/ufw.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build:watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngmaibulat/ufw.git"
+  },
+  "keywords": [
+    "Ubuntu",
+    "Firewall",
+    "UFW"
+  ],
+  "author": "Aibulat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ngmaibulat/ufw/issues"
+  },
+  "homepage": "https://github.com/ngmaibulat/ufw#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.15",
+    "zx": "^7.1.1"
+  },
+  "dependencies": {
+    "@aibulat/isfile": "^0.0.3"
+  }
+}
