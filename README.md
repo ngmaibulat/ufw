@@ -3,13 +3,15 @@
 - Tool to automatically configure ufw rules
 - Run via sudo
 
-### JSON file with allowed ports
+### Input file
 
 Create a file, with list of ports:
 
 ```json
 [22, 443, 8080]
 ```
+
+Save it. For example: fw.json
 
 ### Install
 

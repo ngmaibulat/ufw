@@ -2,10 +2,10 @@
   "name": "@aibulat/ctl-ufw",
   "version": "0.0.1",
   "description": "Manage UFW rules",
-  "main": "dist/ufw.js",
+  "main": "dist/ufw.mjs",
   "type": "module",
   "bin": {
-    "ctl-ufw": "dist/ufw.js"
+    "ctl-ufw": "dist/ufw.mjs"
   },
   "scripts": {
     "test": "node --test",
@@ -18,7 +18,11 @@
   "keywords": [
     "Ubuntu",
     "Firewall",
-    "UFW"
+    "UFW",
+    "TCP",
+    "UDP",
+    "Network",
+    "Port"
   ],
   "author": "Aibulat",
   "license": "MIT",
@@ -29,8 +33,5 @@
   "devDependencies": {
     "@types/node": "^18.11.15",
     "zx": "^7.1.1"
-  },
-  "dependencies": {
-    "@aibulat/isfile": "^0.0.3"
   }
 }
