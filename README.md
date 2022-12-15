@@ -1,7 +1,7 @@
 ### Info
 
 - Tool to automatically configure ufw rules
-- Run via sudo
+- Must be run as root (eg via sudo)
 
 ### Input file
 

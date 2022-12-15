@@ -2,6 +2,20 @@
 
 import fs from "node:fs";
 
+function isRoot() {
+    if (typeof process.getuid != "function") {
+        return false;
+    }
+
+    const uid = process.getuid();
+
+    if (uid) {
+        return false;
+    }
+
+    return true;
+}
+
 function isFile(path: string): Promise<boolean> {
     return new Promise((resolve, reject) => {
         fs.stat(path, (err, stat) => {
@@ -21,12 +35,20 @@ function isFile(path: string): Promise<boolean> {
 const msg = `
 The script will setup ufw according to rules from json file.
 The firewall would be enable and default inbound which is
-not specifically allowed -- will be blocked!
+NOT specifically Allowed -- will be blocked!
 `;
 
 console.log("");
 console.log(chalk.yellowBright(msg));
 console.log("");
+
+const root = isRoot();
+
+if (!root) {
+    const msg = chalk.red("This program must be run via sudo\n");
+    console.error(msg);
+    process.exit(1);
+}
 
 //get policy path from argv
 if (!argv._.length) {
