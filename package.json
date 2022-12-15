@@ -1,6 +1,6 @@
 {
   "name": "@aibulat/ctl-ufw",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Manage UFW rules",
   "main": "dist/ufw.mjs",
   "type": "module",
