@@ -2,6 +2,7 @@ src
 tsconfig.json
 .editorconfig
 .prettierrc.json
+sample.md
 
 # Logs
 logs
